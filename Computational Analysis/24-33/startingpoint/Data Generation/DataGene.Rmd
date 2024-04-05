@@ -1,0 +1,215 @@
+---
+title: "Data Generation"
+author: "Liu"
+date: "2023-04-25"
+output: html_document
+---
+
+```{r}
+rm(list=ls())
+```
+
+
+
+```{r}
+utility432 = read.csv('Utility432.csv')[,-c(1,2)]
+demand432 = read.csv('Demand432.csv')[,-c(1)]
+pload432 = read.csv('Pload432.csv')[,-c(1)]
+qload432 = read.csv('Qload432.csv')[,-c(1)]
+```
+
+
+# Utility
+
+## 1 to 6 
+```{r}
+basis_1_6 = c(1:6)
+sequence1_1 = seq(from = 1, by = 8, length.out = 6)
+sequence1_2 = seq(from = 2, by = 8, length.out = 6)
+# sequence1_3 = seq(from = 3, by = 8, length.out = 6)
+# sequence1_4 = seq(from = 4, by = 8, length.out = 6)
+```
+
+## 7 to 21 
+```{r}
+basis_7_21 = c(7:21)
+sequence7_1 = seq(from = 1, by = 24, length.out = 15)
+sequence7_2 = seq(from = 2, by = 24, length.out = 15)
+sequence7_3 = seq(from = 3, by = 24, length.out = 15)
+sequence7_4 = seq(from = 4, by = 24, length.out = 15)
+sequence7_5 = seq(from = 5, by = 24, length.out = 15)
+sequence7_6 = seq(from = 6, by = 24, length.out = 15)
+```
+
+
+
+# 22 to 24
+```{r}
+basis_22_24 = c(22:24)
+sequence22_1 = seq(from = 1, by = 8, length.out = 3)
+sequence22_2 = seq(from = 2, by = 8, length.out = 3)
+```
+
+```{r}
+sequence_108_index = c(sequence1_1,sequence1_2,sequence7_1,sequence7_2,sequence7_3,sequence7_4,sequence7_5,sequence7_6, sequence22_1,sequence22_2)
+```
+
+```{r}
+sequence_54_index = c(sequence1_1,sequence7_1,sequence7_2,sequence7_3, sequence22_1)
+```
+
+```{r}
+utility108 = utility432[,sequence_108_index]
+write.csv(utility108, "utility108.csv", row.names = FALSE)
+```
+
+```{r}
+utility54 = utility432[,sequence_54_index]
+write.csv(utility54, "utility54.csv", row.names = FALSE)
+```
+
+
+## 
+
+```{r}
+sequence_18_index = seq(from = 1, by = 3, length.out = 18)
+utility18 = utility54[,sequence_18_index]
+write.csv(utility18, "utility18.csv", row.names = FALSE)
+
+```
+
+```{r}
+sequence_6_index = seq(from = 1, by = 3, length.out = 6)
+utility6 = utility18[,sequence_6_index]
+write.csv(utility6, "utility6.csv", row.names = FALSE)
+```
+
+
+
+```{r}
+sequence_2_index = seq(from = 1, by = 3, length.out = 2)
+utility2 = utility6[,sequence_2_index]
+write.csv(utility2, "utility2.csv", row.names = FALSE)
+```
+
+
+# Demand
+
+
+
+```{r}
+demand108 = demand432[,sequence_108_index]
+write.csv(demand108, "demand108.csv", row.names = FALSE)
+```
+
+```{r}
+demand54 = demand432[,sequence_54_index]
+write.csv(demand54, "demand54.csv", row.names = FALSE)
+```
+
+
+## 
+
+```{r}
+sequence_18_index = seq(from = 1, by = 3, length.out = 18)
+demand18 = demand54[,sequence_18_index]
+write.csv(demand18, "demand18.csv", row.names = FALSE)
+
+```
+
+```{r}
+sequence_6_index = seq(from = 1, by = 3, length.out = 6)
+demand6 = demand18[,sequence_6_index]
+write.csv(demand6, "demand6.csv", row.names = FALSE)
+```
+
+
+
+```{r}
+sequence_2_index = seq(from = 1, by = 3, length.out = 2)
+demand2 = demand6[,sequence_2_index]
+write.csv(demand2, "demand2.csv", row.names = FALSE)
+```
+
+
+
+
+# Pload
+
+
+
+```{r}
+pload108 = pload432[,sequence_108_index]
+write.csv(pload108, "pload108.csv", row.names = FALSE)
+```
+
+```{r}
+pload54 = pload432[,sequence_54_index]
+write.csv(pload54, "pload54.csv", row.names = FALSE)
+```
+
+
+
+```{r}
+sequence_18_index = seq(from = 1, by = 3, length.out = 18)
+pload18 = pload54[,sequence_18_index]
+write.csv(pload18, "pload18.csv", row.names = FALSE)
+
+```
+
+```{r}
+sequence_6_index = seq(from = 1, by = 3, length.out = 6)
+pload6 = pload18[,sequence_6_index]
+write.csv(pload6, "pload6.csv", row.names = FALSE)
+```
+
+
+
+```{r}
+sequence_2_index = seq(from = 1, by = 3, length.out = 2)
+pload2 = pload6[,sequence_2_index]
+write.csv(pload2, "pload2.csv", row.names = FALSE)
+```
+
+
+# Qload
+
+
+
+```{r}
+qload108 = qload432[,sequence_108_index]
+write.csv(qload108, "qload108.csv", row.names = FALSE)
+```
+
+```{r}
+qload54 = qload432[,sequence_54_index]
+write.csv(qload54, "qload54.csv", row.names = FALSE)
+```
+
+
+
+```{r}
+sequence_18_index = seq(from = 1, by = 3, length.out = 18)
+qload18 = qload54[,sequence_18_index]
+write.csv(qload18, "qload18.csv", row.names = FALSE)
+
+```
+
+```{r}
+sequence_6_index = seq(from = 1, by = 3, length.out = 6)
+qload6 = qload18[,sequence_6_index]
+write.csv(qload6, "qload6.csv", row.names = FALSE)
+```
+
+
+
+```{r}
+sequence_2_index = seq(from = 1, by = 3, length.out = 2)
+qload2 = qload6[,sequence_2_index]
+write.csv(qload2, "qload2.csv", row.names = FALSE)
+```
+
+
+
+
+

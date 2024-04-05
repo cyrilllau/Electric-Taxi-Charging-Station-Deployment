@@ -1,0 +1,62 @@
+[Windows]
+	
+  1. Open a Command Propmp window (start->cmd, see:
+  http://windows.microsoft.com/en-us/windows-vista/open-a-command-prompt-window) 
+
+  2. In the command console, go to the folder
+	cd /d D:\iOptimize-win64x86-0.9.8\bin 
+		
+  3. To run the code, use:
+	
+Sensitive Analysis
+----------------------------------------------------------------------------------
+Varying C
+
+
+iOptimize.exe --readmps="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\Baseline/small.mps" --readtim="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\Baseline/small.tim" 
+    --readsto="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\Baseline/small.sto"
+    --dllpath="D:\IBM\ILOG\CPLEX_Studio1210\cplex\bin\x64_win64"
+    --dllname=cplex12100.dll -t4
+
+
+iOptimize.exe --readmps="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.036/small.mps" --readtim="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.036/small.tim" 
+    --readsto="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.036/small.sto"
+    --dllpath="D:\IBM\ILOG\CPLEX_Studio1210\cplex\bin\x64_win64"
+    --dllname=cplex12100.dll -t4
+
+iOptimize.exe --readmps="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.03/small.mps" --readtim="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.03/small.tim" 
+    --readsto="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.03/small.sto"
+    --dllpath="D:\IBM\ILOG\CPLEX_Studio1210\cplex\bin\x64_win64"
+    --dllname=cplex12100.dll -t4
+
+iOptimize.exe --readmps="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.025/small.mps" --readtim="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.025/small.tim" 
+    --readsto="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.025/small.sto"
+    --dllpath="D:\IBM\ILOG\CPLEX_Studio1210\cplex\bin\x64_win64"
+    --dllname=cplex12100.dll -t4
+
+
+iOptimize.exe --readmps="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.023/small.mps" --readtim="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.023/small.tim" 
+    --readsto="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.023/small.sto"
+    --dllpath="D:\IBM\ILOG\CPLEX_Studio1210\cplex\bin\x64_win64"
+    --dllname=cplex12100.dll -t4
+
+iOptimize.exe --readmps="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.02/small.mps" --readtim="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.02/small.tim" 
+    --readsto="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.02/small.sto"
+    --dllpath="D:\IBM\ILOG\CPLEX_Studio1210\cplex\bin\x64_win64"
+    --dllname=cplex12100.dll -t4
+
+
+iOptimize.exe --readmps="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.012/small.mps" --readtim="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.012/small.tim" 
+    --readsto="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.012/small.sto"
+    --dllpath="D:\IBM\ILOG\CPLEX_Studio1210\cplex\bin\x64_win64"
+    --dllname=cplex12100.dll -t4
+
+iOptimize.exe --readmps="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.01/small.mps" --readtim="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.01/small.tim" 
+    --readsto="F:\My Drive\Charging Station Project\Sustainable Energy\Sensitive Test\c=0.01/small.sto"
+    --dllpath="D:\IBM\ILOG\CPLEX_Studio1210\cplex\bin\x64_win64"
+    --dllname=cplex12100.dll -t4
+
+
+   
+  Note: Modify the CPLEX path and version if needed.
+        
